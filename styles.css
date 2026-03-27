@@ -1,0 +1,112 @@
+/* Quita márgenes y rellenos por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo general del body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+  padding: 20px;
+}
+
+/* Contenedor para centrar la card */
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card principal */
+.card {
+  width: 100%;              /* Ocupa todo el ancho disponible en celular */
+  max-width: 350px;         /* Pero no crece demasiado */
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;         /* Evita que la imagen se salga de los bordes */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Imagen de la card */
+.card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Contenido interno */
+.card-content {
+  padding: 16px;
+}
+
+/* Título */
+.card-content h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+/* Párrafo */
+.card-content p {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+/* Botón */
+.card-content button {
+  width: 100%;                 /* En celular ocupa todo el ancho */
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: #111827;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Efecto al pasar el mouse */
+.card-content button:hover {
+  background-color: #374151;
+}
+
+/* ------------------------- */
+/* TABLET                    */
+/* ------------------------- */
+@media (min-width: 768px) {
+  .card {
+    max-width: 700px;         /* La card se hace más ancha */
+    display: flex;            /* Imagen y texto quedan lado a lado */
+    align-items: stretch;
+  }
+
+  .card-img {
+    width: 45%;               /* La imagen ocupa parte de la card */
+    height: auto;
+    object-fit: cover;
+  }
+
+  .card-content {
+    width: 55%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .card-content p {
+    font-size: 1.05rem;
+  }
+
+  .card-content button {
+    width: fit-content;       /* En tablet ya no ocupa todo el ancho */
+    padding: 12px 20px;
+  }
+}
